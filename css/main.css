@@ -1,0 +1,213 @@
+        /*IMPORT*/
+        
+        @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+        /*1_Présentation*/
+        /*2_Styles Général*/
+        /*3_Main content*/
+        /*4 Effet*/
+        /*Styles Général*/
+        
+        body {
+            background-color: rgba(208, 245, 208, 0.76);
+            line-height: 1.5;
+            padding: 4em 1em;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 8.5em;
+        }
+        
+        h2 {
+            display: block;
+            position: relative;
+            width: 100%;
+            font-size: 3em;
+            padding: 3px;
+            text-align: center;
+            margin-top: 1em;
+            padding-top: 1em;
+        }
+        
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        /*Main content*/
+        
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-size: 300%;
+            text-align: center;
+        }
+        
+        .accueil {
+            flex-basis: 100%;
+            list-style: none;
+            margin: 0;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding: 0 2em;
+            text-transform: uppercase;
+            transition: margin .5s ease-in-out, max-height .5s ease-in-out, opacity .3s .1s ease-in-out;
+            visibility: hidden;
+        }
+        
+        .menu-box {
+            opacity: 0;
+            position: absolute;
+            top: -1000px;
+            text-align: center;
+        }
+        
+        .menu-box:checked~.accueil {
+            margin: 1em 0;
+            max-height: 1000px;
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .menu-toggle {
+            padding: .5em 1em;
+            text-align: center;
+        }
+        
+        .menu li {
+            border-bottom: 1px solid #eee;
+        }
+        
+        .tfer {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        
+        .trou {
+            display: block;
+            margin-right: 3em;
+            padding: 0.2em;
+            border-bottom: 1px solid #19191a;
+            border-left: 2px solid rgba(75, 71, 18, 0.836);
+        }
+        
+        .img-responsive {
+            width: 550px;
+            height: auto;
+        }
+        
+        .vmarie {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row-reverse;
+            justify-content: space-evenly;
+        }
+        
+        .marie {
+            display: block;
+            margin-left: 3em;
+            padding: 0.2em;
+            border-bottom: 1px solid #19191a;
+            border-left: 2px solid rgba(75, 71, 18, 0.836);
+        }
+        
+        .belouve {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        .fbelouve {
+            display: block;
+            margin-right: 3em;
+            padding: 0.2em;
+            border-bottom: 1px solid #19191a;
+            border-left: 2px solid rgba(75, 71, 18, 0.836);
+        }
+        
+        .hbourg {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            margin-left: 600px;
+            width: 100%;
+        }
+        
+        .bourg {
+            display: block;
+            padding: 0.2em;
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /*Effet*/
+        
+        p:hover {
+            background: #d3c974;
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 1px rgb(0, 0, 0);
+            letter-spacing: 0.2em;
+            padding: 1em 2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: none 200ms ease-out;
+            transition-property: color, background;
+        }
+        
+        .bourg li:hover {
+            background: #d3c974;
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 2px 1px rgb(0, 0, 0);
+            letter-spacing: 0.2em;
+            padding: 1em 2em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: none 200ms ease-out;
+            transition-property: color, background;
+        }
+        
+        @media screen and (max-width:1000px) {
+            /*Général*/
+            * {
+                margin: 10px;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 400%;
+                text-align: center;
+            }
+            h2 {
+                font-size: 200%;
+            }
+            p {
+                font-size: 140%;
+            }
+            .img-responsive {
+                width: 100%;
+            }
+            .tfer {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row-reverse;
+            }
+            .vmarie {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row-reverse;
+            }
+            .belouve {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row-reverse;
+            }
+            .hbourg {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row-reverse;
+                margin-left: auto;
+            }
+        }
